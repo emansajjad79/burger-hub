@@ -1,0 +1,87 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:Arial,sans-serif; color:#222; background:#fff8ef; }
+
+.header { background:#c8102e; display:flex; justify-content:space-between; align-items:center;
+  padding:14px 30px; position:sticky; top:0; z-index:10; transition:padding .3s, box-shadow .3s; }
+.header.scrolled { padding:8px 30px; box-shadow:0 4px 20px rgba(0,0,0,.4); }
+.brand { font-size:30px; font-weight:900; letter-spacing:3px; color:#fff; text-decoration:none; }
+.brand span { color:#ffc72c; }
+nav a { color:#fff; text-decoration:none; margin-left:24px; font-weight:bold; }
+nav a:hover { color:#ffc72c; }
+
+.hero { min-height:85vh; display:flex; align-items:center; padding:0 8%;
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)), url("images/hero.jpg") center/cover no-repeat; }
+.hero-text { max-width:520px; color:#fff; }
+.hero-text h1 { font-size:54px; line-height:1.1; margin-bottom:18px; animation:fadeUp 1s ease both; }
+.hero-text h1 span { color:#ffc72c; }
+.hero-text p { font-size:19px; margin-bottom:40px; animation:fadeUp 1s ease .3s both; }
+.btn { display:inline-block; background:#ffc72c; color:#222; padding:15px 32px; border-radius:30px;
+  text-decoration:none; font-weight:bold; animation:fadeUp 1s ease .6s both, pulse 2.5s infinite 2s;
+  transition:transform .3s; }
+.btn:hover { transform:translateY(-4px) scale(1.05); }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(35px)} to{opacity:1;transform:none} }
+@keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(255,199,44,.6)} 70%{box-shadow:0 0 0 16px rgba(255,199,44,0)} 100%{box-shadow:0 0 0 0 rgba(255,199,44,0)} }
+
+.section { padding:70px 8%; }
+.section.dark { background:#1d1d1d; }
+.section h2 { text-align:center; font-size:34px; margin-bottom:38px; }
+.dark h2 { color:#fff; }
+.center { text-align:center; margin:8px 0; font-size:18px; }
+
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:26px; }
+.deal { background:#fff; border:3px dashed #c8102e; border-radius:14px; padding:28px; text-align:center; }
+.deal.hot { background:#c8102e; color:#fff; border-color:#ffc72c; }
+.deal h3 { font-size:22px; margin-bottom:10px; }
+.deal b { display:block; margin-top:14px; font-size:28px; color:#c8102e; }
+.deal.hot b { color:#ffc72c; }
+
+.card { background:#2a2a2a; border-radius:14px; overflow:hidden; text-align:center; padding-bottom:20px;
+  color:#fff; transform-style:preserve-3d; will-change:transform; }
+.card:hover { box-shadow:0 20px 40px rgba(0,0,0,.5); }
+.card img { width:100%; height:240px; object-fit:cover; transition:transform .7s; }
+.card:hover img { transform:scale(1.1); }
+.card h3 { margin:14px 0 6px; }
+.price { color:#ffc72c; font-weight:bold; margin-bottom:12px; }
+.order { background:#c8102e; color:#fff; border:none; padding:11px 26px; border-radius:22px;
+  cursor:pointer; font-weight:bold; transition:transform .2s, background .3s; }
+.order:hover { background:#ffc72c; color:#222; transform:scale(1.06); }
+
+footer { background:#c8102e; color:#fff; text-align:center; padding:20px; }
+
+.reveal { opacity:0; translate:0 40px; transition:opacity .8s ease var(--d,0s), translate .8s ease var(--d,0s), transform .25s, box-shadow .3s; }
+.reveal.visible { opacity:1; translate:0 0; }
+
+@media (max-width:700px) {
+  .header { padding:12px 16px; }
+  .brand { font-size:22px; }
+  nav a { margin-left:12px; font-size:14px; }
+  .hero { text-align:center; justify-content:center; }
+  .hero-text h1 { font-size:36px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation:none !important; transition:none !important; }
+  .reveal { opacity:1; translate:0 0; }
+}
+
+.hero { position: relative; overflow: hidden; }
+#burger3d {
+  position: absolute;
+  right: 0; top: 0;
+  width: 55%; height: 100%;
+  z-index: 1;
+}
+.hero-text { position: relative; z-index: 2; }
+
+@media (max-width: 700px) {
+  #burger3d { width: 100%; height: 55%; top: auto; bottom: 0; }
+}
+.hero { position: relative; overflow: hidden; }
+#burger3d {
+  position: absolute;
+  right: 0; top: 0;
+  width: 55%; height: 100%;
+  z-index: 1;
+}
+.hero-text { position: relative; z-index: 2; }

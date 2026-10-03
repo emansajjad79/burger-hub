@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Hub | Fast Food in Gujranwala</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#home" class="brand">BURGER<span>HUB</span></a>
+  <nav>
+    <a href="#deals">Deals</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+    <canvas id="burger3d"></canvas>
+  <div class="hero-text">
+    <h1>Hot. Fresh. <span>Delivered Fast.</span></h1>
+    <p>Order your favourite burgers, pizza and more in one message.</p>
+    <a class="btn" id="heroBtn" href="#" target="_blank">Order on WhatsApp</a>
+  </div>
+</section>
+
+<section class="section" id="deals">
+  <h2>Today's Deals</h2>
+  <div class="grid deals">
+    <div class="deal"><h3>Student Deal</h3><p>Zinger Burger + Drink</p><b>Rs. 599</b></div>
+    <div class="deal hot"><h3>Family Deal</h3><p>4 Burgers + Large Fries + 1.5L Drink</p><b>Rs. 2,199</b></div>
+    <div class="deal"><h3>Pizza Deal</h3><p>Medium Pizza + 2 Drinks</p><b>Rs. 1,299</b></div>
+  </div>
+</section>
+
+<section class="section dark" id="menu">
+  <h2>Our Menu</h2>
+  <div class="grid">
+    <div class="card"><img src="images/item1.jpg" alt="Zinger Burger"><h3>Zinger Burger</h3><p class="price">Rs. 450</p><button class="order" data-name="Zinger Burger">Order Now</button></div>
+    <div class="card"><img src="images/item2.jpg" alt="Pizza"><h3>Fajita Pizza</h3><p class="price">Rs. 899</p><button class="order" data-name="Fajita Pizza">Order Now</button></div>
+    <div class="card"><img src="images/item3.jpg" alt="Broast"><h3>Chicken Broast</h3><p class="price">Rs. 650</p><button class="order" data-name="Chicken Broast">Order Now</button></div>
+    <div class="card"><img src="images/item4.jpg" alt="Shawarma"><h3>Chicken Shawarma</h3><p class="price">Rs. 280</p><button class="order" data-name="Chicken Shawarma">Order Now</button></div>
+    <div class="card"><img src="images/item5.jpg" alt="Fries"><h3> Fries</h3><p class="price">Rs. 350</p><button class="order" data-name="Loaded Fries">Order Now</button></div>
+    <div class="card"><img src="images/item6.jpg" alt="Cold drink"><h3>Cold Drink</h3><p class="price">Rs. 120</p><button class="order" data-name="Cold Drink">Order Now</button></div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p class="center">📞 03703851991</p>
+  <p class="center">📍 Gujranwala, Punjab</p>
+  <p class="center">🕒 Open daily: 12pm - 12am</p>
+</section>
+
+<footer>
+  <p>© 2026 Burger Hub. All rights reserved.</p>
+  <p class="credit">3D model: "Burger" by SimForge, generated with Sloyd, CC BY 4.0</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="burger3d.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
